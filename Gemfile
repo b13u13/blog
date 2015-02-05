@@ -6,17 +6,14 @@ ruby '2.0.0'
 
 group :development, :test do
   gem 'sqlite3'
-  gem 'rspec-rails', '2.13.1'
+  gem 'rspec-rails'
 end
 
 group :test do
   gem 'selenium-webdriver'
-  gem 'capybara', '~> 2.4.3'
-  gem 'rb-notifu', '0.0.4'
-  gem 'win32console', '1.3.2'
-  gem 'wdm', '0.1.0'
+  gem 'capybara'
 end
-
+  gem 'minitest'
   gem 'sass-rails', '~> 4.0.3'
   gem 'uglifier', '>= 1.3.0'
   gem 'coffee-rails', '~> 4.0.0'
