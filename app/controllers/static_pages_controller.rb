@@ -6,6 +6,9 @@ class StaticPagesController < ApplicationController
   end
 
   def abort
+  end
+
+  def contact
 
   end
 end
