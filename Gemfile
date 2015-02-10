@@ -3,7 +3,7 @@ ruby '2.0.0'
 
   gem 'rails', '4.1.8'
   gem 'bootstrap-sass', '2.3.2.0'
-  gem 'bcrypt-ruby', '3.1.2'
+  gem 'bcrypt-ruby'
 
 
 group :development, :test do
@@ -12,6 +12,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'factory_girl_rails'
   gem 'selenium-webdriver'
   gem 'capybara'
 end

@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="Rails blog: development" uuid="4b3e7766-0ede-4f04-bfb0-ced59f536170">
-      <secret-storage>memory</secret-storage>
-    </data-source>
-    <data-source name="Rails blog: test" uuid="27340eef-7d7e-413c-ab9e-e03d76b15f7a">
-      <secret-storage>memory</secret-storage>
-    </data-source>
+    <data-source name="Rails blog: development" uuid="4b3e7766-0ede-4f04-bfb0-ced59f536170" />
+    <data-source name="Rails blog: test" uuid="27340eef-7d7e-413c-ab9e-e03d76b15f7a" />
   </component>
 </project>
