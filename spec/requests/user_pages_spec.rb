@@ -148,8 +148,6 @@ describe "User pages" do
           click_button "Sign in"
           visit users_path
         end
-
-
         it { should_not have_link('delete', href: user_path(admin)) }
       end
     end
