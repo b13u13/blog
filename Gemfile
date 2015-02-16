@@ -11,6 +11,7 @@ ruby '2.0.0'
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
+  gem 'rspec-its'
 end
 
 group :test do
