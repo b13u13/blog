@@ -17,6 +17,16 @@ describe User do
   it { should respond_to(:remember_token) }
 
   it { should be_valid}
+  it { should_not be_admin}
+
+  describe "admin" do
+    before do
+      @user.save!
+      @user.toggle!(:admin)
+    end
+
+    it { should be_admin}
+  end
 
 
   describe "remember token" do

@@ -36,6 +36,7 @@ describe "Authentication" do
       end
 
       it { should have_title(user.name) }
+      it { should have_link('Users',       href: users_path) }
       it { should have_link('Profile',     href: user_path(user)) }
       it { should have_link('Sign out',    href: signout_path) }
       it { should_not have_link('Sign in', href: signin_path) }
@@ -75,6 +76,12 @@ describe "Authentication" do
           before { patch user_path(user) }
           specify { expect(response).to redirect_to(signin_path) }
         end
+
+        describe "visit the users index" do
+          before { visit users_path }
+          it { should have_title('Sign in')}
+        end
+
       end
     end
 
@@ -96,6 +103,22 @@ describe "Authentication" do
 
       describe "submitting a PATCH request to the Users#update action" do
         before { patch user_path(wrong_user) }
+        specify { expect(response).to redirect_to(root_url) }
+      end
+    end
+    describe "as noo-admin user" do
+      let(:user) { FactoryGirl.create(:user) }
+      let(:non_admin) { FactoryGirl.create(:user) }
+
+      before do
+        visit signin_path
+        fill_in "Email",    with: non_admin.email
+        fill_in "Password", with: non_admin.password
+        click_button "Sign in"
+      end
+
+      describe "submitting a DELETE reauest to the User#destroy action" do
+        before { delete user_path(user) }
         specify { expect(response).to redirect_to(root_url) }
       end
     end
