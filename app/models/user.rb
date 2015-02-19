@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
            dependent:   :destroy
 
   has_secure_password
-
+  enum locale: %i(ru en)
   validates :name,  presence: true, length: { maximum: 50 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email,  presence: true,

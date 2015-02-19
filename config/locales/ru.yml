@@ -1,0 +1,48 @@
+ru:
+    sign_up:
+      header: "Регистрация"
+      label_name: "Имя"
+      label_email: "Email"
+      label_password: "Пароль"
+      label_confirm: "Подтвердите пароль"
+      create_button: "Создать мой аккаунт"
+    home_page:
+      microposts: "Лента сообщений"
+      welcome_1: "Добро пожаловть!"
+      welcome_2: "Мы рады Вас видеть"
+      sign_up_button: "Зарегистрироваться!"
+    user_info:
+      profile_link: "мой профиль"
+      micropost: "сообщение"
+    unfollow: "Отписаться"
+    stats:
+      following: "Подписан"
+      followers: "Подписчики"
+    posts_form:
+      post: "Опубликовать"
+      hint: "Введите новое сообщение..."
+    follow: "Подписаться"
+    feed_item:
+       posted: "Опубликовано"
+       ago: "назад"
+       delete: "удалить"
+       confirm: "Вы увурены?"
+    update_page:
+        title: "Редактирование профиля"
+        save_button: "Сохранить изменения"
+        cange_link: "изменить"
+        russian: "Русский"
+        eanglish: "Английский"
+    activerecord:
+      models:
+        item: 'Пользователь'
+      attributes:
+        item:
+          name: "Имя"
+          email: "Почта"
+          password: "Пароль"
+          password_confirmation: "Подтвердите"
+
+
+
+

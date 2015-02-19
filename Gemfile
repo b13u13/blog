@@ -26,7 +26,9 @@ end
   gem 'jquery-rails'
   gem 'turbolinks'
   gem 'jbuilder', '~> 2.0'
-
+  gem 'i18n'
+  gem 'active_enum'
+  gem 'russian'
 
 
 group :doc do

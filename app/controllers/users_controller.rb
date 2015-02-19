@@ -8,6 +8,7 @@ class UsersController < ApplicationController
     @microposts = @user.microposts.paginate(page: params[:page])
   end
 
+
   def index
     @users = User.paginate(page: params[:page])
   end
@@ -66,7 +67,7 @@ class UsersController < ApplicationController
   private
 
      def user_params
-       params.require(:user).permit(:name, :email, :password, :password_confirmation)
+       params.require(:user).permit(:name, :email, :password, :password_confirmation, :locale)
      end
 
     def signed_in_user

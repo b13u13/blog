@@ -14,6 +14,7 @@ GEM
       activesupport (= 4.1.8)
       builder (~> 3.1)
       erubis (~> 2.7.0)
+    active_enum (0.9.1)
     activemodel (4.1.8)
       activesupport (= 4.1.8)
       builder (~> 3.1)
@@ -125,6 +126,8 @@ GEM
       rspec-support (~> 3.2.0)
     rspec-support (3.2.1)
     rubyzip (1.1.7)
+    russian (0.6.0)
+      i18n (>= 0.5.0)
     sass (3.2.19)
     sass-rails (4.0.5)
       railties (>= 4.0.0, < 5.0)
@@ -170,6 +173,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  active_enum
   bcrypt
   bootstrap-sass (= 2.3.2.0)
   bootstrap-will_paginate
@@ -177,6 +181,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   factory_girl_rails
   faker
+  i18n
   jbuilder (~> 2.0)
   jquery-rails
   minitest
@@ -185,6 +190,7 @@ DEPENDENCIES
   rails_12factor
   rspec-its
   rspec-rails
+  russian
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   selenium-webdriver

@@ -13,19 +13,19 @@
       </aside>
 
       <div class="span8">
-        <h3>Micropost Feed</h3>
+        <h3><%= t('home_page.microposts')%></h3>
         <%= render 'shared/feed' %>
       </div>
     </div>
 <% else %>
     <div class="center hero-unit">
-      <h1>Welcome to the Blog, my little tractorist</h1>
+      <h1><%= t('home_page.welcome_1') %></h1>
 
       <h2>
-        This is the home page for the you blog.
+        <%= t('home_page.welcome_2') %>
       </h2>
 
-      <%= link_to "Sign up now!", signup_path,
+      <%= link_to t('home_page.sign_up_button'), signup_path,
                   class: "btn btn-large btn-primary" %>
     </div>
 

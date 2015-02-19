@@ -20,4 +20,38 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  sign_up:
+      header: "Sign Up"
+      label_name: "Name"
+      label_email: "Email"
+      label_password: "Password"
+      label_confirm: "Confirm"
+      create_button: "Create my account"
+  home_page:
+    microposts: "Micropost Feed"
+    welcome_1: "Welcome to the Blog, my little tractorist"
+    welcome_2: "This is the home page for the you blog."
+    sign_up_button: "Sign up now!"
+  user_info:
+          profile_link: "view my profile"
+          micropost: "micropost"
+  unfollow: "Unfollow"
+  stats:
+     following: "following"
+     followers: "followers"
+  posts_form:
+     post: "Post"
+     hint: "Compose new micropost..."
+  follow: "Follow"
+  feed_item:
+    posted: "Posted"
+    ago: "ago"
+    delete: "delete"
+    confirm: "You sure?"
+  update_page:
+    title: "Update your profile"
+    save_button: "Save changes"
+    cange_link: "change"
+    russian: "RU"
+    eanglish: "EN"
+
