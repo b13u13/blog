@@ -5,7 +5,7 @@
   </span>
   <span class="content"><%= wrap(feed_item.content)%> </span>
   <span class="timestamp">
-    <%= t('feed_item.posted')%> <%= distance_of_time_in_words_to_now(feed_item.created_at) %> <%= t('feed_item.ago')%>.
+    <%= t('feed_item.posted')%> <%= time_ago_in_words(feed_item.created_at) %> <%= t('feed_item.ago')%>.
 
   </span>
   <% if current_user?(feed_item.user) %>
