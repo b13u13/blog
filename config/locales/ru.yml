@@ -13,7 +13,7 @@ ru:
       sign_up_button: "Зарегистрироваться!"
     user_info:
       profile_link: "мой профиль"
-      micropost: "сообщение"
+      micropost: "сообщений"
     unfollow: "Отписаться"
     stats:
       following: "Подписан"
@@ -31,18 +31,47 @@ ru:
         title: "Редактирование профиля"
         save_button: "Сохранить изменения"
         cange_link: "изменить"
-        russian: "Русский"
-        eanglish: "Английский"
+    about:
+       title: "Инфо"
+       content: "Ожидается информация"
+    contact:
+      title: "Обратная связь"
+      content: "Пожелания и предложения принмаем по адресу: TBD"
+    help:
+     title: "Поддержка"
+     content: "Да поможет вам Скуби ДУ!"
+    index:
+      title: "Пользователи"
+    show_follow:
+     link: "профайл"
+     posts: "Сообщений:"
+    error_message:
+       title: "Форма содержит ошибки "
     activerecord:
-      models:
-        item: 'Пользователь'
-      attributes:
-        item:
-          name: "Имя"
-          email: "Почта"
-          password: "Пароль"
-          password_confirmation: "Подтвердите"
-
-
-
-
+       models:
+         user: Пользователи
+       attributes:
+         user:
+            name: "Имя"
+            password: "Пароль"
+            email: "Електронный адрес"
+    sign_in:
+      title: "Войти"
+      sign_up_now: "Зарегисрироваться сейчас!"
+      new_user: "Новый пользователь?"
+    header:
+      home: "Домашняя"
+      users: "Пользователи"
+      profile: "Мой профиль"
+      settings: "Настройки"
+      sign_out: "Выйти"
+    news: "Новости"
+    please_sign_in: "Пожалуйста войдите!"
+    profile_update: "Пользователь успешно обновлен"
+    welcome: "Добро пожаловть!"
+    user_delete: "Пользователь удален"
+    following: "Подписан на"
+    followers: "Мои подписчики"
+    invalid_login: "Неверная комбинация логина и пароля"
+    create_post: "Сообщение опубликовано!"
+    account: "Профиль"

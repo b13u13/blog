@@ -34,7 +34,7 @@ en:
     sign_up_button: "Sign up now!"
   user_info:
           profile_link: "view my profile"
-          micropost: "micropost"
+          micropost: "posts"
   unfollow: "Unfollow"
   stats:
      following: "following"
@@ -52,6 +52,45 @@ en:
     title: "Update your profile"
     save_button: "Save changes"
     cange_link: "change"
-    russian: "RU"
-    eanglish: "EN"
+
+  about:
+    title: "About Us"
+    content: "TBD"
+  contact:
+    title: "Contact US"
+    content: "TBD"
+  help:
+    title: "Help"
+    content: "TBD"
+  index:
+    title: "All Users"
+  show_follow:
+    link: "view profile"
+    posts: "Microposts:"
+  error_message:
+    title: "The form contains errors"
+  sign_in:
+    title: "Sign in"
+    sign_up_now: "Sign up now!"
+    new_user: "New user?"
+  header:
+    home: "Home"
+    users: "Users"
+    profile: "Profile"
+    settings: "Settings"
+    sign_out: "Sign out"
+  news: "News"
+  please_sign_in: "Please sign in."
+  profile_update: "Profile updated"
+  welcome: "Welcome my little tractorist"
+  user_delete: "User deleted"
+  following: "Following"
+  followers: "Followers"
+  invalid_login: "Invalid email/password combination"
+  create_post: "Micropost created!"
+  account: "Account"
+
+
+
+
 

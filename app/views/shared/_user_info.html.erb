@@ -6,5 +6,5 @@
   <%= link_to t('user_info.profile_link'), current_user %>
 </span>
 <span>
-  <%= pluralize(current_user.microposts.count, t('user_info.micropost')) %>
+  <%= t('user_info.micropost')%> <%= current_user.microposts.count  %>
 </span>
