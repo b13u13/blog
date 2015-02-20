@@ -92,7 +92,6 @@ en:
   create_post: "Micropost created!"
   account: "Account"
   datetime:
-      time_in_words:
         half_a_minute: "half a minute"
         less_than_x_seconds:
           one:   "less than 1 second"
@@ -127,7 +126,7 @@ en:
         almost_x_years:
           one:   "almost 1 year"
           other: "almost %{count} years"
-      prompts:
+  prompts:
         year:   "Year"
         month:  "Month"
         day:    "Day"
