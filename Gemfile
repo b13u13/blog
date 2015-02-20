@@ -28,7 +28,7 @@ end
   gem 'jbuilder', '~> 2.0'
   gem 'i18n'
   gem 'russian'
-
+  gem 'time_ago_in_words', '~> 0.1.1'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0', require: false
