@@ -29,6 +29,10 @@ end
   gem 'i18n'
   gem 'russian'
   gem 'time_ago_in_words', '~> 0.1.1'
+  gem 'carrierwave'
+  gem 'mini_magick'
+
+
 
 group :doc do
   gem 'sdoc', '~> 0.4.0', require: false

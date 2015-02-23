@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   has_many :reverse_relationships, foreign_key: "followed_id",
            class_name:  "Relationship",
            dependent:   :destroy
-
+  mount_uploader :avatar, AvatarUploader
   has_secure_password
   enum locale: %i(ru en)
   validates :name,  presence: true, length: { maximum: 50 }
