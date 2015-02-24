@@ -2,8 +2,11 @@
 <div class="row">
   <aside class="span4">
     <section>
-      <h1>
+      <div class="avatar">
         <%=  image_tag @user.avatar.thumb.url %>
+      </div>
+
+      <h1>
         <%= @user.name %>
       </h1>
     </section>
@@ -23,3 +26,6 @@
   </div>
 
 </div>
+
+
+<%= image_tag @user.avatar.thumb.url %>

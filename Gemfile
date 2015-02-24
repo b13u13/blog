@@ -31,7 +31,7 @@ end
   gem 'time_ago_in_words', '~> 0.1.1'
   gem 'carrierwave'
   gem 'mini_magick'
-
+  gem 'file_validators'
 
 
 group :doc do

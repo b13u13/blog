@@ -4,11 +4,8 @@ module MicropostsHelper
     sanitize(raw(content.split.map{ |s| wrap_long_string(s) }.join(' ')))
   end
 
- def replicate(content)
-   repli_regexp = /@[a-z\d\-._]+/i
-   user_link = content.scan(repli_regexp)
 
- end
+
 
   private
 

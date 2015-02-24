@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   mount_uploader :avatar, AvatarUploader
   has_secure_password
   enum locale: %i(ru en)
+  validates :avatar,  file_size: { less_than_or_equal_to: 5.megabyte }
   validates :name,  presence: true, length: { maximum: 50 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email,  presence: true,
@@ -48,6 +49,8 @@ class User < ActiveRecord::Base
     def create_remember_token
       self.remember_token = User.encrypt(User.new_remember_token)
     end
+
+
 
 
 end

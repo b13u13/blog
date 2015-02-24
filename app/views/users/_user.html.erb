@@ -1,5 +1,8 @@
 <li>
-  <%= gravatar_for user, size: 52 %>
+  <div class="avatar">
+    <%= image_tag user.avatar.thumb.url %>
+  </div>
+
   <%= link_to user.name, user %>
   <% if current_user.admin? && !current_user?(user) %>
       | <%= link_to t('feed_item.delete'), user, method: :delete, data: {confirm: t('feed_item.confirm')} %>

@@ -18,10 +18,10 @@
             <%= f.label t('sign_up.label_confirm') %>
             <%= f.password_field :password_confirmation %>
 
-        <p>
-          <label>My Avatar</label>
-          <%= image_tag(@user.avatar_url) if @user.avatar? %>
-          <%= f.file_field :avatar %>
+
+              <label>My Avatar</label>
+              <%= f.file_field :avatar %>
+               <%= f.hidden_field :avatar_cache %>
 
 
           <%= f.submit t('sign_up.create_button'), class: "btn btn-large btn-primary" %>

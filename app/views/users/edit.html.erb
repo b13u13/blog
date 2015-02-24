@@ -17,19 +17,22 @@
 
         <%= f.label t('sign_up.label_confirm') %>
         <%= f.password_field :password_confirmation %>
-
+        <!--
         <%= f.label :locale %>
-        <%= f.select :locale, options_for_select([['RU', 'ru'], ['EN', 'en']],
-                                                   selected: :options ) %>
-
+        <%= f.select :locale, options_for_select([['RU', 'ru'], ['EN', 'en']], selected: :options ) %>
+                 -->
+        <p>
+        <label>My Avatar</label>
+        <%= image_tag(@user.avatar.url) if @user.avatar?  %>
+        <p>
+        <%= f.file_field :avatar %>
+        <%= f.hidden_field :avatar_cache %>
+          </p>
+        </p>
         <%= f.submit t('update_page.save_button'), class: "btn btn-large btn-primary" %>
     <% end %>
 
 
 
-
-
-    <%= gravatar_for @user %>
-    <a href="http://gravatar.com/emails" target="_blank"><%= t('update_page.cange_link') %></a>
   </div>
 </div>
