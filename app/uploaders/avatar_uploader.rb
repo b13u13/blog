@@ -2,8 +2,10 @@ class AvatarUploader < CarrierWave::Uploader::Base
   CarrierWave::SanitizedFile.sanitize_regexp = /[^a-zA-Zа-яА-ЯёЁ0-9\.\-\+_]/u
   include CarrierWave::MiniMagick
 
+  storage :fog
+
   process :resize_to_fit => [100, 100]
-  storage :file
+
 
   version :thumb do
     process :resize_to_fill => [50, 50]
@@ -22,7 +24,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   end
 
   def cache_dir
-    '/tmp/projectname-cache'
+    '/tmp/cache'
   end
 
   def extension_white_list

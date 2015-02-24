@@ -32,6 +32,7 @@ end
   gem 'carrierwave'
   gem 'mini_magick'
   gem 'file_validators'
+  gem 'fog'
 
 
 group :doc do
