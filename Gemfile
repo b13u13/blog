@@ -33,7 +33,7 @@ end
   gem 'mini_magick'
   gem 'file_validators'
   gem 'fog'
-
+  gem 'unf'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0', require: false
