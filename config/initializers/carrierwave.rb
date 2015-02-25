@@ -18,4 +18,6 @@ CarrierWave.configure do |config|
   # To let CarrierWave work on heroku
   config.cache_dir = "#{Rails.root}/tmp/uploads"
   config.fog_directory = ENV['S3_BUCKET']
+  config.fog_public = false
+  config.fog_attributes = {'Cache-Control'=>'max-age=315576000'}
 end
