@@ -3,5 +3,27 @@
     <div class="field">
       <%= f.text_area :content, placeholder: t('posts_form.hint') %>
     </div>
+    <div class="field">
+      Осталось символов  <span id="message_counter"></span>
+
+    </div>
+
+        <script>
+            $("#micropost_content").keyup(function(){
+                var symbols_left = 140;
+                symbols_left -= $(this).val().length;
+                var ifmc = document.getElementById("micropost_content");
+                ifmc.onkeydown = function () {
+                    if (symbols_left==0) {
+                        if(event.keyCode !=8) {
+                            return false;}
+                    };
+                }
+                $('#message_counter').html(symbols_left);
+            });
+
+
+        </script>
+
     <%= f.submit t('posts_form.post'), class: "btn btn-large btn-primary" %>
 <% end %>
