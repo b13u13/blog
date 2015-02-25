@@ -4,7 +4,9 @@ class AvatarUploader < CarrierWave::Uploader::Base
 
   process :resize_to_fit => [100, 100]
 
-
+  def store_dir
+    'avatar/'
+  end
 
 
   def default_url
@@ -19,7 +21,9 @@ class AvatarUploader < CarrierWave::Uploader::Base
     process resize_to_fill: [25, 25]
   end
 
-
+  def cache_dir
+    '/tmp/cache'
+  end
 
   def extension_white_list
     %w(jpg jpeg gif png)

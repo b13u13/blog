@@ -3,7 +3,7 @@
   <aside class="span4">
     <section>
       <div class="avatar">
-        <%=  image_tag @user.avatar.thumb.url %>
+        <%=  image_tag @user.avatar.url(:thumb) %>
       </div>
       <h1>
         <%= @user.name %>
