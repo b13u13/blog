@@ -6,7 +6,7 @@ module MicropostsHelper
 
   def auto_link_usernames(text)
     text.gsub /@[\w+\-._]+/ do |nick_name|
-      user = User.find_by_nick_name(nick_name[1..-1])
+      user = User.find_by(nick_name: nick_name[1..-1])
       if user
         link_to(nick_name, user_path(user))
       else
