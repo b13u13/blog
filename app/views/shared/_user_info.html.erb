@@ -2,12 +2,14 @@
 <%= link_to (image_tag current_user.avatar.thumb.url), current_user %>
 </div>
 <h1>
-
   <%= current_user.name %>
+
 </h1>
+
 <span>
   <%= link_to t('user_info.profile_link'), current_user %>
 </span>
 <span>
   <%= t('user_info.micropost')%> <%= current_user.microposts.count  %>
+  <div class="timestamp"><h5><%= current_user.nick_name %></h5></div>
 </span>

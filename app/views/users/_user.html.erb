@@ -2,11 +2,12 @@
   <div class="avatar">
     <%= image_tag user.avatar.thumb.url %>
   </div>
-
+  <div class="timestamp"><h5><%= user.nick_name %></h5></div>
   <%= link_to user.name, user %>
   <% if current_user.admin? && !current_user?(user) %>
       | <%= link_to t('feed_item.delete'), user, method: :delete, data: {confirm: t('feed_item.confirm')} %>
   <% end %>
   <br>
   <%= t('user_info.micropost')%> <%= user.microposts.count  %>
+
 </li>

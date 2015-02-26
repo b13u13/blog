@@ -2,6 +2,7 @@ ru:
     sign_up:
       header: "Регистрация"
       label_name: "Имя"
+      label_nick: "Ник"
       label_email: "Email"
       label_password: "Пароль"
       label_confirm: "Подтвердите пароль"
