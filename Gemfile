@@ -34,6 +34,7 @@ end
   gem 'file_validators'
   gem 'fog'
   gem 'unf'
+  gem 'rails_autolink'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0', require: false

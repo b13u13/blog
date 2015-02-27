@@ -5,7 +5,8 @@
   <span class="user">
     <%= link_to feed_item.user.name, feed_item.user %>
   </span>
-  <span class="content"><%= auto_link_usernames(wrap(feed_item.content))%> </span>
+  <span class="content"><%= auto_link(auto_link_usernames(wrap(feed_item.content)),
+                            :html => { :target => '_blank'})%> </span>
   <span class="timestamp">
     <%= t('feed_item.posted')%> <%= time_ago_in_words(feed_item.created_at) %> <%= t('feed_item.ago')%>.
   </span>

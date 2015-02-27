@@ -21,7 +21,8 @@
         <ol class="microposts">
         <% @microposts.each do |micropost| %>
             <li>
-              <%= auto_link_usernames(wrap(micropost.content)) %>
+              <%= auto_link(auto_link_usernames(wrap(micropost.content)),
+                            :html => { :target => '_blank'} ) %>
               <br>
               <span class="timestamp">
                  <%= t('feed_item.posted')%> <%= time_ago_in_words(micropost.created_at) %> <%= t('feed_item.ago')%>.
