@@ -19,8 +19,20 @@
     <% if @user.microposts.any? %>
         <h3><%= t('show_follow.posts')%> <%= @user.microposts.count %></h3>
         <ol class="microposts">
-          <%= render @microposts %>
-        </ol>
+        <% @microposts.each do |micropost| %>
+            <li>
+              <%= auto_link_usernames(micropost.content) %>
+              <br>
+              <span class="timestamp">
+                 <%= t('feed_item.posted')%> <%= time_ago_in_words(micropost.created_at) %> <%= t('feed_item.ago')%>.
+                </span>
+              <% if current_user?(micropost.user) %>
+                  <%= link_to t('feed_item.delete'), micropost, method: :delete,
+                              data: { confirm: t('feed_item.confirm') }  %>
+              <%end %>
+            </li>
+        <% end %>
+        </ol>>
         <%= will_paginate @microposts %>
     <% end %>
   </div>
