@@ -1,0 +1,19 @@
+<% provide(:title, t('update_page.micropost'))%>
+<h1><%= t('update_page.micropost') %></h1>
+
+<div class="row">
+  <div class="span6 offset3">
+
+<%= form_for (@micropost) do |f| %>
+
+        <div class="field">
+          <%= f.label t('update_page.text') %>
+          <%= f.text_area :content, :style => "height:100px;"  %>
+        </div>
+
+    <p>
+      <%= f.submit t('update_page.save_button'), class: "btn btn-large btn-primary" %>
+    </p>
+<% end %>
+    </div>
+ </div>

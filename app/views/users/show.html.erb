@@ -27,8 +27,10 @@
                  <%= t('feed_item.posted')%> <%= time_ago_in_words(micropost.created_at) %> <%= t('feed_item.ago')%>.
                 </span>
               <% if current_user?(micropost.user) %>
+                  <%= link_to t('feed_item.edit'), edit_micropost_path(micropost)  %> |
                   <%= link_to t('feed_item.delete'), micropost, method: :delete,
                               data: { confirm: t('feed_item.confirm') }  %>
+
               <%end %>
             </li>
         <% end %>

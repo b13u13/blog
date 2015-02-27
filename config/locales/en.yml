@@ -51,8 +51,11 @@ en:
     posted: "Posted"
     ago: "ago"
     delete: "delete"
+    edit: "edit"
     confirm: "You sure?"
   update_page:
+    micropost: "Update micropost"
+    text: "Micropost"
     title: "Update your profile"
     save_button: "Save changes"
     cange_link: "change"
@@ -92,6 +95,7 @@ en:
   invalid_login: "Invalid email/password combination"
   create_post: "Micropost created!"
   account: "Account"
+  update_mocropost: "Post has been edited"
 
 
 
