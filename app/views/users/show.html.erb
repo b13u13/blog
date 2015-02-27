@@ -21,7 +21,7 @@
         <ol class="microposts">
         <% @microposts.each do |micropost| %>
             <li>
-              <%= auto_link_usernames(micropost.content) %>
+              <%= auto_link_usernames(wrap(micropost.content)) %>
               <br>
               <span class="timestamp">
                  <%= t('feed_item.posted')%> <%= time_ago_in_words(micropost.created_at) %> <%= t('feed_item.ago')%>.

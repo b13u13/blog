@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
                      uniqueness: { case_sensitive: false }
   validates :password, length: { minimum: 6 }
 
-  validates :nick_name,  presence: true,
+  validates :nick_name, length: { maximum: 24 }, presence: true,
             uniqueness: { case_sensitive: true }
 
   def User.new_remember_token
