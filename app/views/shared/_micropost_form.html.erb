@@ -1,5 +1,8 @@
-<%= form_for(@micropost) do |f| %>
+<%= form_for(@micropost, html: { multipart: true }) do |f| %>
     <%= render 'shared/error_messages', object: f.object %>
+    <span>
+    <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png', class: "btn btn-success"  %>
+    </span>
     <div class="field">
       <%= f.text_area :content, placeholder: t('posts_form.hint') %>
     </div>
