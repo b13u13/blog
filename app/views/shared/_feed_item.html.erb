@@ -13,20 +13,18 @@
          data-img-url="<%=feed_item.picture.url%>">
         <%= image_tag feed_item.picture.thumb.url%>
       </a>
-
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog" >
           <div class="modal-content">
               <%= image_tag feed_item.picture.url %>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
+          </div>
+        </div>
+      </div>
       <br>
       <script>
           $('li a').click(function(e) {
               $('#myModal img').attr('src', $(this).attr('data-img-url'));
           });
-
       </script>
 
   <% end %>

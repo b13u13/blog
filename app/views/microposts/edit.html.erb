@@ -11,9 +11,13 @@
           <%= f.text_area :content, :style => "height:100px;"  %>
         </div>
 
-    <p>
-      <%= f.submit t('update_page.save_button'), class: "btn btn-large btn-primary" %>
-    </p>
+        <%= image_tag(@micropost.picture.thumb.url) if @micropost.picture?  %>
+        <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png', class: "btn btn-success"  %>
+
+        <br>
+        <br>
+       <%= f.submit t('update_page.save_button'), class: "btn btn-large btn-primary" %>
+
 <% end %>
     </div>
  </div>

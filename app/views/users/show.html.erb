@@ -23,7 +23,27 @@
             <li>
               <%= auto_link(auto_link_usernames(wrap(micropost.content)),
                             :html => { :target => '_blank'} ) %>
-              <br>
+              <%if micropost.picture? %>
+                  <br>
+                  <a href="#myModal" data-toggle="modal" data-target="#myModal"
+                     data-img-url="<%=micropost.picture.url%>">
+                    <%= image_tag micropost.picture.thumb.url%>
+                  </a>
+                  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" >
+                      <div class="modal-content">
+                        <%= image_tag micropost.picture.url %>
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                  <script>
+                      $('li a').click(function(e) {
+                          $('#myModal img').attr('src', $(this).attr('data-img-url'));
+                      });
+                  </script>
+              <% end %>
+                    <br>
               <span class="timestamp">
                  <%= t('feed_item.posted')%> <%= time_ago_in_words(micropost.created_at) %> <%= t('feed_item.ago')%>.
                 </span>
