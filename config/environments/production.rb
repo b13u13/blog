@@ -74,19 +74,18 @@ Rails.application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Do not dump schema after migrations.
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.perform_deliveries = true
-
-  config.action_mailer.default_url_options = { :host => 'whispering-inlet-2278.herokuapp.com' }
-
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { host:'whispering-inlet-2278.herokuapp.com' }
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default :charset => "utf-8"
   config.action_mailer.smtp_settings = {
       :address => "smtp.gmail.com",
-      :port => "587",
-      :domain => "whispering-inlet-2278.herokuapp.com",
+      :port => 587,
+      :domain => 'whispering-inlet-2278.herokuapp.com',
       :user_name => "aovsiychuk@gmail.com",
       :password => "246204373",
-      :authentication => "plain",
+      :authentication => :plain,
       :enable_starttls_auto => true
   }
 
