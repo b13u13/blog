@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
            class_name:  "Relationship",
            dependent:   :destroy
   mount_uploader :avatar, AvatarUploader
+  has_many :conversations, :foreign_key => :sender_id
   has_secure_password
   enum locale: %i(ru en)
   validates :avatar,  file_size: { less_than_or_equal_to: 5.megabyte }

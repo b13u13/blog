@@ -35,6 +35,10 @@ end
   gem 'fog'
   gem 'unf'
   gem 'rails_autolink'
+  gem 'private_pub'
+  gem 'thin'
+  gem 'faye'
+
 
 group :doc do
   gem 'sdoc', '~> 0.4.0', require: false
