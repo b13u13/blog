@@ -21,7 +21,7 @@
         <ol class="microposts">
         <% @microposts.each do |micropost| %>
             <li>
-              <%= auto_link(auto_link_usernames(wrap(micropost.content)),
+              <%= auto_link(auto_link_usernames(micropost.content),
                             :html => { :target => '_blank'} ) %>
               <%if micropost.picture? %>
                   <br>
