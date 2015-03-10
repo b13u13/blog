@@ -18,7 +18,7 @@
     <%= render 'shared/follow_form' if signed_in? %>
     <% if @user.microposts.any? %>
         <h3><%= t('show_follow.posts')%> <%= @user.microposts.count %></h3>
-        <ol class="microposts">
+        <ol class="microposts  fixed-width wrap-words">
         <% @microposts.each do |micropost| %>
             <li>
               <%= auto_link(auto_link_usernames(micropost.content),
