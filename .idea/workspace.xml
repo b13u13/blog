@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e1d6bfc-5faf-4575-ba9a-f53870df6b81" name="Default" comment="Fixed region">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/polling.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/polling.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -108,7 +106,7 @@
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/polling.coffee">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.3429395" vertical-offset="0" max-vertical-offset="357">
-              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -1278,7 +1276,7 @@
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/polling.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3429395" vertical-offset="0" max-vertical-offset="357">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
           <folding />
         </state>
       </provider>
