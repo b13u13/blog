@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  get 'password_resets/new'
 
-  get 'password_resets/edit'
 
   resources :users do
     member do
@@ -21,5 +19,6 @@ Rails.application.routes.draw do
   match '/contact', to: 'static_pages#contact', via: 'get'
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
+  resources :comments, only: [:new, :create, :index]
 
 end

@@ -1,4 +1,5 @@
 require File.expand_path('../boot', __FILE__)
+require File.expand_path('../csrf_protection', __FILE__)
 
 # Pick the frameworks you want:
 require "active_model/railtie"
@@ -28,5 +29,7 @@ module Blog
     # config.i18n.default_locale = :de
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
     config.i18n.default_locale = :ru
+    config.middleware.delete Rack::Lock
+    config.middleware.use FayeRails::Middleware, mount: '/faye', :timeout => 25
   end
 end

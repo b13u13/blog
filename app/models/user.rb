@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   has_many :reverse_relationships, foreign_key: "followed_id",
            class_name:  "Relationship",
            dependent:   :destroy
+  has_many :comments, dependent: :delete_all
   mount_uploader :avatar, AvatarUploader
   has_secure_password
   enum locale: %i(ru en)

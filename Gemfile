@@ -35,6 +35,9 @@ end
   gem 'fog'
   gem 'unf'
   gem 'rails_autolink'
+  gem 'jquery-turbolinks'
+  gem 'faye-rails'
+  gem 'thin'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0', require: false

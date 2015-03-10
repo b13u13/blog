@@ -273,3 +273,7 @@ aside {
   word-wrap: break-word;
 }
 
+#comments {
+  max-height: 500px;
+  overflow: auto;
+}
