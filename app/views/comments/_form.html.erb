@@ -5,7 +5,14 @@
         <%= f.text_area :body, rows: 3, class: 'form-control', required: true, maxlength: 2000 %>
         <small class="label label-warning">Не может быть пустым и превышать 2000 символов.</small>
       </div>
-      <%= f.submit 'Оправить', class: 'btn btn-primary btn-lg' %>
+     
   <% end %>
 </div>
 
+<script>
+    $('#comment_body').keydown(function(e) {
+        if (e.keyCode == 13) {
+            $('#comment_body').submit();
+        }
+    });
+</script>
