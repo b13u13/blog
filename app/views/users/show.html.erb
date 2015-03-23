@@ -43,6 +43,39 @@
                       });
                   </script>
               <% end %>
+
+              <% if micropost.link? %>
+                  <br>
+                  <a href="#videoModal" class="btn btn-default" data-toggle="modal" data-target="#videoModal"
+                     data-theVideo="<%="http://youtube.com/embed/#{micropost.uid}"%>" >
+                    <%= image_tag "https://img.youtube.com/vi/#{micropost.uid}/mqdefault.jpg",  class: 'yt_preview img-rounded' %></a>
+                  <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">Х</button>
+                        <iframe width="800" height="500" src="<%="http://youtube.com/embed/#{micropost.uid}"%>" frameborder="0" allowfullscreen ></iframe>
+                      </div>
+                    </div>
+                  </div>
+
+                  <script>
+                      playModal();
+                      function playModal(){
+                          var trigger = $("body").find('[data-toggle="modal"]');
+                          trigger.click(function() {
+                              var theModal = $(this).data( "target" ),
+                                      videoSRC = $(this).attr( "data-theVideo" ),
+                                      videoSRCauto = videoSRC+"?feature=player_detailpage" ;
+                              $(theModal+' iframe').attr('src', videoSRCauto);
+                              $(theModal+' button.close').click(function () {
+                                  $(theModal+' iframe').attr('src', videoSRC);
+                              });
+                          });
+                      }
+                  </script>
+              <% end %>
+
+
                     <br>
               <span class="timestamp">
                  <%= t('feed_item.posted')%> <%= time_ago_in_words(micropost.created_at) %> <%= t('feed_item.ago')%>.

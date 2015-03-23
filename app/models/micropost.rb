@@ -6,6 +6,22 @@ class Micropost < ActiveRecord::Base
   mount_uploader :picture, PictureUploader
   validate  :picture_size
 
+  YT_LINK_FORMAT = /\A.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/i
+  validates :link,  format: YT_LINK_FORMAT
+  before_create -> do
+
+    uid = link.match(YT_LINK_FORMAT)
+
+    self.uid = uid[2] if uid && uid[2]
+
+    if self.uid.to_s.length != 11
+      self.errors.add(:link, 'is invalid.')
+      false
+    end
+  end
+
+
+
 
   def self.from_users_followed_by(user)
     followed_user_ids = "SELECT followed_id FROM relationships
