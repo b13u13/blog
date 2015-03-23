@@ -47,13 +47,13 @@
               <% if micropost.link? %>
                   <br>
                   <a href="#videoModal" class="btn btn-default" data-toggle="modal" data-target="#videoModal"
-                     data-theVideo="<%="http://youtube.com/embed/#{micropost.uid}"%>" >
+                     data-theVideo="<%="https://youtube.com/embed/#{micropost.uid}"%>" >
                     <%= image_tag "https://img.youtube.com/vi/#{micropost.uid}/mqdefault.jpg",  class: 'yt_preview img-rounded' %></a>
                   <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">Х</button>
-                        <iframe width="800" height="500" src="<%="http://youtube.com/embed/#{micropost.uid}"%>" frameborder="0" allowfullscreen ></iframe>
+                        <iframe width="800" height="500" src="<%="https://youtube.com/embed/#{micropost.uid}"%>" frameborder="0" allowfullscreen ></iframe>
                       </div>
                     </div>
                   </div>
